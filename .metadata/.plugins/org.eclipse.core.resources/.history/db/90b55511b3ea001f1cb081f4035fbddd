@@ -1,0 +1,46 @@
+/*
+ * Usuario.h
+ *
+ *  Created on: 7 feb 2025
+ *      Author: jose
+ */
+
+using namespace std;
+#include <string>
+#include "CuentaBancaria.h"
+#ifndef USUARIO_H_
+#define USUARIO_H_
+
+
+class Usuario{
+private:
+	string nombreCompleto;
+	string telefono;
+	int edad;
+	CuentaBancaria *cuentaB;
+public:
+	Usuario();
+	Usuario(string apellidosNombe, string telefono, int edad);
+	Usuario(string apellidosNombe, string telefono, int edad, CuentaBancaria &cuentaB);
+	Usuario(const Usuario &usuario);
+	string getNombreCompleto() const;
+	void getNombreCompleto(string &nombreCompleto);
+	string getTelefono() const;
+	int getEdad() const;
+	void mostrar() const;
+	string pasarACadena() const;
+	void setNombreCompleto(string nombre_completo);
+	void setTelefono(string telefono);
+	void setEdad(int edad);
+	~Usuario();
+
+	//metodos cuenta
+	float getSaldo() const;
+	void ingresar(float saldo);
+	float sacarDinero(float dinero);
+	void mostrar();
+
+
+};
+
+#endif /* USUARIO_H_ */

@@ -1,0 +1,58 @@
+/*
+ * Usuario.cpp
+ *
+ *  Created on: 7 feb 2025
+ *      Author: jose
+ */
+
+#include "Usuario.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+Usuario::Usuario(){
+	this->nombreCompleto="";
+	this->telefono="";
+	this->edad=0;
+	cout << "constructor por defecto" << endl;
+}
+
+int Usuario::getEdad() const{
+	return edad;
+}
+
+string Usuario::getNombreCompleto() const{
+	return nombreCompleto;
+}
+
+void Usuario::getNombreCompleto(string &nombreCompleto) const{
+	 this->nombreCompleto = nombreCompleto;
+}
+
+string Usuario::getTelefono() const{
+	return telefono;
+}
+
+void Usuario::setEdad(int edad){
+	this->edad=edad;
+}
+void Usuario::setNombreCompleto(string nombreCompleto){
+	this->nombreCompleto = nombreCompleto;
+}
+
+void Usuario::setTelefono(string telefono){
+	this->telefono=telefono;
+}
+
+string Usuario::pasarACadena() const{
+	return getNombreCompleto()+" "+getTelefono()+" " + to_string(getEdad())  ;
+}
+
+void Usuario::mostrar() const{
+	cout<<this->pasarACadena()<<endl;
+}
+
+
+Usuario::~Usuario(){
+	cout << "llamando al destructor" << endl;
+}

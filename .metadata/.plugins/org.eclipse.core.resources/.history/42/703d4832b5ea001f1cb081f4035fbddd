@@ -1,0 +1,103 @@
+/*
+ * Usuario.cpp
+ *
+ *  Created on: 7 feb 2025
+ *      Author: jose
+ */
+
+#include "Usuario.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+Usuario::Usuario(){
+	this->nombreCompleto="";
+	this->telefono="";
+	this->edad=0;
+	cout << "constructor por defecto" << endl;
+	cuentaB = new CuentaBancaria();
+}
+
+
+Usuario::Usuario(string nombreCompleto, string telefono, int edad) {
+	this->nombreCompleto=nombreCompleto;
+	this->telefono=telefono;
+	this->edad=edad;
+	cuentaB = new CuentaBancaria();
+}
+
+Usuario::Usuario(string nombreCompleto, string telefono, int edad, CuentaBancaria &cuentaB) {
+	this->nombreCompleto=nombreCompleto;
+	this->telefono=telefono;
+	this->edad=edad;
+	this->cuentaB = new CuentaBancaria(cuentaB);
+}
+
+Usuario::Usuario(string nombreCompleto, string telefono, int edad, string numeroCuenta, int saldo) {
+		this->nombreCompleto=nombreCompleto;
+		this->telefono=telefono;
+		this->edad=edad;
+		this->cuentaB = new CuentaBancaria(numeroCuenta,saldo);
+}
+
+Usuario::Usuario(const Usuario &usuario) {
+	this->nombreCompleto=usuario.getNombreCompleto();
+	this->telefono=usuario.getTelefono();
+	this->edad=usuario.getEdad();
+	this->cuentaB = new CuentaBancaria(usuario.cuentaB);
+}
+int Usuario::getEdad() const{
+	return edad;
+}
+
+string Usuario::getNombreCompleto() const{
+	return nombreCompleto;
+}
+
+void Usuario::getNombreCompleto(string &nombreCompleto){
+	 this->nombreCompleto = nombreCompleto;
+}
+
+string Usuario::getTelefono() const{
+	return telefono;
+}
+
+void Usuario::setEdad(int edad){
+	this->edad=edad;
+}
+void Usuario::setNombreCompleto(string nombreCompleto){
+	this->nombreCompleto = nombreCompleto;
+}
+
+void Usuario::setTelefono(string telefono){
+	this->telefono=telefono;
+}
+
+string Usuario::pasarACadena() const{
+	return getNombreCompleto()+" "+getTelefono()+" " + to_string(getEdad())  ;
+}
+
+void Usuario::mostrar() const{
+	cout<<this->pasarACadena()<<endl;
+}
+
+float Usuario::getSaldo() const {
+	return cuentaB->saldo;
+}
+
+void Usuario::ingresar(float saldo) {
+	cuentaB->ingresar(saldo);
+}
+
+float Usuario::sacarDinero(float dinero) {
+	return sacarDinero(dinero);
+}
+
+void Usuario::mostrar() {
+	cuentaB->mostrar();
+}
+
+Usuario::~Usuario(){
+	cout << "llamando al destructor" << endl;
+	delete cuentaB;
+}

@@ -1,0 +1,17 @@
+/*
+ * PruebaCuentaBancaria.h
+ *
+ *  Created on: 14 feb 2025
+ *      Author: jose
+ */
+
+#ifndef PRUEBACUENTABANCARIA_H_
+#define PRUEBACUENTABANCARIA_H_
+
+class PruebaCuentaBancaria {
+public:
+	PruebaCuentaBancaria();
+	virtual ~PruebaCuentaBancaria();
+};
+
+#endif /* PRUEBACUENTABANCARIA_H_ */

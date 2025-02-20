@@ -1,0 +1,74 @@
+/*
+ * PruebaUsuario.cpp
+ *
+ *  Created on: 7 feb 2025
+ *      Author: jose
+ */
+
+
+#include "PruebasUsuario.h"
+#include "Usuario.h"
+
+#include <iostream>
+using namespace std;
+
+
+void pruebasUsuariosInstanciasEstica(){
+	cout<<"INICIANDO PRUEBAS SOBRE OBJETOS ESTATICOS DE LA CLASE USUARIO"<<endl;
+	Usuario u1;
+	u1.mostrar();
+
+	u1.setNombreCompleto("Ana Sánchez");
+	u1.setTelefono("+34 111111111");
+	u1.setEdad(23);
+	u1.mostrar();
+
+	string nombre1=u1.getNombreCompleto();
+	cout<<"el nombre completo obtenido de getNombre es = "+nombre1<<endl;
+
+
+	string nombre2;
+	u1.getNombreCompleto(nombre2);
+	cout<<"el nombre completo obtenido de getNombre es = "+nombre2<<endl;
+
+	string usuario1= u1.pasarACadena();
+	cout << "Datos del usuario 1 devueltos por pasarACadena:"<<endl;
+	cout<< usuario1<<endl;
+
+	Usuario u2=u1; // o también:Usuario u2(u1)
+	u2.mostrar();
+
+
+}
+
+void pruebasUsuarioInstanciasDinamicas(){
+		cout<<"INICIANDO PRUEBAS SOBRE OBJETOS DINAMICAS DE LA CLASE USUARIO"<<endl;
+
+		Usuario *u1=new Usuario();
+		u1->mostrar();
+
+		u1->setNombreCompleto("Ana Sánchez");
+		u1->setTelefono("+34 111111111");
+		u1->setEdad(23);
+		u1->mostrar();
+
+		string nombre1=u1->getNombreCompleto();
+		cout<<"el nombre completo obtenido de getNombre es = "+nombre1<<endl;
+
+
+		string nombre2;
+		u1->getNombreCompleto(nombre2);
+		cout<<"el nombre completo obtenido de getNombre es = "+nombre2<<endl;
+
+		string usuario1= u1->pasarACadena();
+		cout << "Datos del usuario 1 devueltos por pasarACadena:"<<endl;
+		cout<< usuario1<<endl;
+
+		Usuario *u2=new Usuario(*u1); // o también:Usuario u2(u1)
+		u2->mostrar();
+
+		delete u1;
+		delete u1;
+
+}
+

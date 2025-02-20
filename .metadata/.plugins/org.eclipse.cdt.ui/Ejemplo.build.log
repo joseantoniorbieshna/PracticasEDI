@@ -1,0 +1,6 @@
+16:22:48 **** Incremental Build of configuration Debug for project Ejemplo ****
+make all 
+make: No se hace nada para 'all'.
+
+16:22:48 Build Finished. 0 errors, 0 warnings. (took 73ms)
+

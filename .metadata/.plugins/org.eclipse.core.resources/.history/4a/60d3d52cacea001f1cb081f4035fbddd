@@ -1,0 +1,11 @@
+
+#include <string>
+#include <iostream>
+#include "CuentaBancaria.h"
+using namespace std;
+
+
+
+CuentaBancaria::CuentaBancaria(){
+	saldo=0;
+}

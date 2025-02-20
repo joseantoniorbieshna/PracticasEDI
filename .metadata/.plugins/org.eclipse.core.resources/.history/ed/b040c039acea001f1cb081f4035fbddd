@@ -1,0 +1,33 @@
+
+#include <string>
+#include <iostream>
+#include "CuentaBancaria.h"
+using namespace std;
+
+CuentaBancaria::CuentaBancaria(string numeroCuenta, float saldo) {
+	this->saldo=saldo;
+}
+
+CuentaBancaria::CuentaBancaria(const CuentaBancaria &cuentaBancari) {
+}
+
+string CuentaBancaria::getNumeroCuenta() const {
+}
+
+float CuentaBancaria::getSaldo() const {
+}
+
+void CuentaBancaria::setNumeroCuenta(string numeroCuenta) {
+}
+
+void CuentaBancaria::ingresar(float saldo) {
+}
+
+float CuentaBancaria::sacarDinero(float dinero) {
+}
+
+void CuentaBancaria::mostrar() {
+}
+
+CuentaBancaria::~CuentaBancaria() {
+}

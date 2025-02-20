@@ -1,0 +1,24 @@
+/*
+ * CuentaBancaria.h
+ *
+ *  Created on: 14 feb 2025
+ *      Author: jose
+ */
+
+#ifndef CUENTABANCARIA_H_
+#define CUENTABANCARIA_H_
+
+#include <iostream>
+
+#include <string>
+using namespace std
+
+
+class CuentaBancaria{
+	private:
+		string numeroCuenta;
+
+};
+
+
+#endif /* CUENTABANCARIA_H_ */

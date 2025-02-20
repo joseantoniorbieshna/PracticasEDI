@@ -1,0 +1,25 @@
+/*
+ * PruebaCuentaBancaria.cpp
+ *
+ *  Created on: 14 feb 2025
+ *      Author: jose
+ */
+
+#include "PruebaCuentaBancaria.h"
+
+//Vamos a llamar al constructor por defecto
+
+void pruebaCuentaBancaria() {
+	//caso 1: constructor por defecto
+	CuentaBancaria *c1;
+	c1= new CuentaBancaria();
+	c1->setNumeroCuenta("ES12345");
+	c1->ingresar(100);
+
+	cout<<;
+
+	//caso 2: constructor parametrizado
+
+	//caso 3: constructor por copia
+
+}

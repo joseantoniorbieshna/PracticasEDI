@@ -1,0 +1,59 @@
+/*
+ * PruebaCuentaBancaria.cpp
+ *
+ *  Created on: 14 feb 2025
+ *      Author: jose
+ */
+
+#include "PruebaCuentaBancaria.h"
+
+//Vamos a llamar al constructor por defecto
+
+void pruebaCuentaBancaria() {
+	cout<< "INICIANDO PRUEBAS DE LA CLASE CUENTA BANCARIA" << endl;
+	//caso 1: constructor por defecto
+	CuentaBancaria *c1;
+	c1= new CuentaBancaria();
+	c1->setNumeroCuenta("ES12345");
+	c1->ingresar(100);
+
+	cout<<"Esta cuente tiene un numeroCuenta de ES12345 y un saldo de 100"<<endl;
+	cout<<"Al probar sale:"<<endl;
+	c1->mostrar();
+
+	c1->ingresar(50);
+	if(c1->getSaldo()!=150){
+		cerr<<"El saldo es incorrecto"<<endl;
+	}
+
+	//caso 2: constructor parametrizado
+	CuentaBancaria *c2;
+	c2 = new CuentaBancaria("ES14345",200);
+
+	cout<<"Esta cuente tiene un numeroCuenta de ES14345 y un saldo de 200"<<endl;
+	cout<<"Al probar sale:"<<endl;
+	c2->mostrar();
+
+	c2->ingresar(50);
+	if(c2->getSaldo()!=250){
+		cerr<<"El saldo es incorrecto"<<endl;
+	}
+
+	//caso 3: constructor por copia
+	CuentaBancaria *c3;
+	c3=new CuentaBancaria(*c2);
+
+	cout<<"Esta cuente tiene un numeroCuenta de ES14345 y un saldo de 250"<<endl;
+	cout<<"Al probar sale:"<<endl;
+	c3->mostrar();
+
+	c3->ingresar(50);
+	if(c3->getSaldo()!=300){
+		cerr<<"El saldo es incorrecto"<<endl;
+	}
+
+	delete c1;
+	delete c2;
+	delete c3;
+
+}

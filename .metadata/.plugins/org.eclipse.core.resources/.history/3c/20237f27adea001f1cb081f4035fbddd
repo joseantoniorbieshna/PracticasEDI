@@ -1,0 +1,18 @@
+/*
+ * PruebaCuentaBancaria.cpp
+ *
+ *  Created on: 14 feb 2025
+ *      Author: jose
+ */
+
+#include "PruebaCuentaBancaria.h"
+
+PruebaCuentaBancaria::PruebaCuentaBancaria() {
+	// TODO Auto-generated constructor stub
+
+}
+
+PruebaCuentaBancaria::~PruebaCuentaBancaria() {
+	// TODO Auto-generated destructor stub
+}
+

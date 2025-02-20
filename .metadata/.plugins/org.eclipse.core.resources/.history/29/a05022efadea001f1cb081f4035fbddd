@@ -1,0 +1,14 @@
+/*
+ * PruebaCuentaBancaria.h
+ *
+ *  Created on: 14 feb 2025
+ *      Author: jose
+ */
+
+#ifndef PRUEBACUENTABANCARIA_H_
+#define PRUEBACUENTABANCARIA_H_
+#include "CuentaBancaria.h";
+
+void pruebaCuentaBancaria();
+
+#endif /* PRUEBACUENTABANCARIA_H_ */

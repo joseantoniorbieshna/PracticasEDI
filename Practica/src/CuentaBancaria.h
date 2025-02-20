@@ -1,0 +1,45 @@
+/*
+ * CuentaBancaria.h
+ *
+ *  Created on: 14 feb 2025
+ *      Author: jose
+ */
+
+#ifndef CUENTABANCARIA_H_
+#define CUENTABANCARIA_H_
+
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+
+class CuentaBancaria{
+	private:
+		string numeroCuenta;
+		float saldo;
+	public:
+		//constructores
+		CuentaBancaria();
+		CuentaBancaria(string numeroCuenta, float saldo);
+		CuentaBancaria(const CuentaBancaria &cuentaBancari);
+
+		//getters
+		string getNumeroCuenta() const;
+		float getSaldo() const;
+
+		//setters
+		void setNumeroCuenta(string numeroCuenta);
+		void ingresar(float saldo);
+		//otros
+		float sacarDinero(float dinero);
+		void mostrar();
+
+		//destrucor
+		~CuentaBancaria();
+
+
+};
+
+
+#endif /* CUENTABANCARIA_H_ */
