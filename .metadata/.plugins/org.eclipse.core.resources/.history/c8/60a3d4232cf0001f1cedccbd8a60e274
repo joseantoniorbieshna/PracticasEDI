@@ -1,0 +1,18 @@
+/*
+ * PruebaPatinete.cpp
+ *
+ *  Created on: 21 feb 2025
+ *      Author: jose
+ */
+
+#include "PruebaPatinete.h"
+
+PruebaPatinete::PruebaPatinete() {
+	// TODO Auto-generated constructor stub
+
+}
+
+PruebaPatinete::~PruebaPatinete() {
+	// TODO Auto-generated destructor stub
+}
+

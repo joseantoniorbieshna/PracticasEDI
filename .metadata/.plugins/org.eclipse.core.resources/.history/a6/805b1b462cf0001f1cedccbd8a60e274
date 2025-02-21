@@ -1,0 +1,12 @@
+/*
+ * PruebaPatinete.h
+ *
+ *  Created on: 21 feb 2025
+ *      Author: jose
+ */
+
+#ifndef SRC_PRUEBAPATINETE_H_
+#define SRC_PRUEBAPATINETE_H_
+
+void pruebaPatinete();
+#endif /* SRC_PRUEBAPATINETE_H_ */

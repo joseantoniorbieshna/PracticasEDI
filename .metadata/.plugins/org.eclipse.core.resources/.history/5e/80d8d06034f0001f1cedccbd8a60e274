@@ -1,0 +1,44 @@
+/*
+ * PruebaPatinete.cpp
+ *
+ *  Created on: 21 feb 2025
+ *      Author: jose
+ */
+
+#include "PruebaPatinete.h"
+#include "Patinete.h"
+#include <iostream>
+using namespace std;
+
+void pruebaPatinete() {
+	//caso 1: constructor por defecto
+	Patinete *PatineteDefault = new Patinete();
+	if(PatineteDefault->getIdentificador()==""){
+			cout<<"El constructor por defecto no pone valor al identificador-correcto"<<endl;
+	}else{
+			cerr<<"Hay un valor por defecto en el identificador - constructor por defecto"<<endl;
+	}
+
+	//caso 2: constructor parametrizado
+	Patinete *patinete1=new Patinete("ABC123","BMW","L3");
+	Patinete *patinete2=new Patinete("ABC123","BMN","L1");
+	if(*patinete1==*patinete2){
+		cout<<"Los patinetes tienen la misma matricula"<<endl;
+	}else{
+		cerr<<"Los patinetes no tienen la mima matricula"<<endl;
+	}
+	//caso 3: constructor por copia
+	Patinete *PatineteCopia = new Patinete(*patinete1);
+
+	if(*PatineteCopia==*patinete2){
+		cout<<"Los patinetes tienen la misma matricula-constructor copia"<<endl;
+	}else{
+		cerr<<"Los patinetes no tienen la mima matricula-constructor copia"<<endl;
+	}
+
+
+	delete patinete1, delete patinete2;
+	patinete1 = nullptr;
+	patinete2 = nullptr;
+
+}

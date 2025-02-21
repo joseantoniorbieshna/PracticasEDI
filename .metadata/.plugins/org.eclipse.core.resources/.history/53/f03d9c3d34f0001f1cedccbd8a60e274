@@ -1,0 +1,19 @@
+//============================================================================
+// Name        : Practica.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include "PruebasUsuario.h"
+#include "PruebaCuentaBancaria.h"
+#include "PruebaPatinete.h"
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	pruebaPatinete();
+	return 0;
+}

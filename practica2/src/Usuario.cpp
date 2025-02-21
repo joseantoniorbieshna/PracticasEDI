@@ -97,7 +97,16 @@ void Usuario::mostrar() {
 	cuentaB->mostrar();
 }
 
+string Usuario::getEmail() {
+	return email;
+}
+
+string Usuario::getDNI() {
+	return dni;
+}
+
 Usuario::~Usuario(){
 	cout << "llamando al destructor" << endl;
 	delete cuentaB;
+	 cuentaB = nullptr;
 }

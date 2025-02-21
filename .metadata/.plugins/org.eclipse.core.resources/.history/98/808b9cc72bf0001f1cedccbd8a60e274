@@ -1,0 +1,72 @@
+/*
+ * Patinete.h
+ *
+ *  Created on: 21 feb 2025
+ *      Author: jose
+ */
+
+#ifndef SRC_PATINETE_H_
+#define SRC_PATINETE_H_
+
+#include <string>
+#include "Usuario.h"
+using namespace std;
+
+class Patinete {
+private:
+	string identificador;
+	string marca;
+	string modelo;
+	Usuario *usuarioActual;
+	bool averiado;
+	bool disponible;
+
+public:
+	// contructor por defecto
+	Patinete();
+	//constructor por copia
+	Patinete(const Patinete &patinete);
+	string getIdentificador() const;
+	string getMarca() const;
+	string getDNIUsuario() const;
+	Usuario* getUsuario() const;
+	bool isAveriado() const;
+	bool isDisponible() const;
+	void mostrar();
+	bool operator == (const Patinete &patineteComparacion);
+	virtual ~Patinete();
+
+	void setAveriado(bool averiado) {
+		this->averiado = averiado;
+	}
+
+	void setDisponible(bool disponible) {
+		this->disponible = disponible;
+	}
+
+	void setIdentificador(const string &identificador) {
+		this->identificador = identificador;
+	}
+
+	void setMarca(const string &marca) {
+		this->marca = marca;
+	}
+
+	const string& getModelo() const {
+		return modelo;
+	}
+
+	void setModelo(const string &modelo) {
+		this->modelo = modelo;
+	}
+
+	const Usuario*& getUsuarioActual() const {
+		return usuarioActual;
+	}
+
+	void setUsuarioActual(const Usuario *&usuarioActual) {
+		this->usuarioActual = usuarioActual;
+	}
+};
+
+#endif /* SRC_PATINETE_H_ */

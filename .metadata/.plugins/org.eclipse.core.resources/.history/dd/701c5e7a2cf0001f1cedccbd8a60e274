@@ -1,0 +1,14 @@
+/*
+ * PruebaPatinete.cpp
+ *
+ *  Created on: 21 feb 2025
+ *      Author: jose
+ */
+
+#include "PruebaPatinete.h"
+
+inline void pruebaPatinete() {
+	//caso 1: constructor por defecto
+	Patinete
+
+}

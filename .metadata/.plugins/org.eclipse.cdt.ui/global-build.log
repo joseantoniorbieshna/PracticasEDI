@@ -1,12 +1,36 @@
-10:24:03 **** Incremental Build of configuration Debug for project practica2 ****
+10:20:09 **** Incremental Build of configuration Debug for project practica2 ****
 make all 
-Building file: ../src/Usuario.cpp
+Building file: ../src/PruebaPatinete.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Usuario.d" -MT"src/Usuario.o" -o "src/Usuario.o" "../src/Usuario.cpp"
-Finished building: ../src/Usuario.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PruebaPatinete.d" -MT"src/PruebaPatinete.o" -o "src/PruebaPatinete.o" "../src/PruebaPatinete.cpp"
+Finished building: ../src/PruebaPatinete.cpp
  
 Building target: practica2
 Invoking: GCC C++ Linker
-g++  -o "practica2" ./src/CuentaBancaria.o ./src/Practica.o ./src/PruebaCuentaBancaria.o ./src/PruebasUsuario.o ./src/Usuario.o   
+g++  -o "practica2" ./src/CuentaBancaria.o ./src/Patinete.o ./src/Practica.o ./src/PruebaCuentaBancaria.o ./src/PruebaPatinete.o ./src/PruebasUsuario.o ./src/Usuario.o   
+Finished building target: practica2
+ 
+10:21:38 **** Incremental Build of configuration Debug for project practica2 ****
+make all 
+Building file: ../src/PruebaPatinete.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PruebaPatinete.d" -MT"src/PruebaPatinete.o" -o "src/PruebaPatinete.o" "../src/PruebaPatinete.cpp"
+Finished building: ../src/PruebaPatinete.cpp
+ 
+Building target: practica2
+Invoking: GCC C++ Linker
+g++  -o "practica2" ./src/CuentaBancaria.o ./src/Patinete.o ./src/Practica.o ./src/PruebaCuentaBancaria.o ./src/PruebaPatinete.o ./src/PruebasUsuario.o ./src/Usuario.o   
+Finished building target: practica2
+ 
+10:23:18 **** Incremental Build of configuration Debug for project practica2 ****
+make all 
+Building file: ../src/PruebaPatinete.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PruebaPatinete.d" -MT"src/PruebaPatinete.o" -o "src/PruebaPatinete.o" "../src/PruebaPatinete.cpp"
+Finished building: ../src/PruebaPatinete.cpp
+ 
+Building target: practica2
+Invoking: GCC C++ Linker
+g++  -o "practica2" ./src/CuentaBancaria.o ./src/Patinete.o ./src/Practica.o ./src/PruebaCuentaBancaria.o ./src/PruebaPatinete.o ./src/PruebasUsuario.o ./src/Usuario.o   
 Finished building target: practica2
  

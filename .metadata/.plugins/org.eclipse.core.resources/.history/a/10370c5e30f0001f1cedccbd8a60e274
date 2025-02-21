@@ -1,0 +1,78 @@
+/*
+ * Patinete.cpp
+ *
+ *  Created on: 21 feb 2025
+ *      Author: jose
+ */
+
+#include "Patinete.h"
+#include <iostream>
+
+Patinete::Patinete() {
+	usuarioActual=nullptr;
+	disponible=false;
+	averiado=false;
+
+}
+
+Patinete::Patinete(string identificador, string marca, string modelo) {
+	usuarioActual = nullptr;
+	disponible=true;
+	averiado=false;
+}
+
+Patinete::Patinete(const Patinete &patinete) {
+	usuarioActual=patinete.getUsuario();
+	identificador = patinete.getIdentificador();
+	marca = patinete.getMarca();
+	modelo = patinete.getModelo();
+
+	disponible = patinete.isDisponible();
+	averiado = patinete.isAveriado();
+}
+
+string Patinete::getIdentificador() const {
+	return identificador;
+}
+
+string Patinete::getMarca() const {
+	return marca;
+}
+
+Usuario* Patinete::getUsuario() const {
+	return usuarioActual;
+}
+
+bool Patinete::isAveriado() const {
+	return averiado;
+}
+
+bool Patinete::isDisponible() const {
+	return disponible;
+}
+
+void Patinete::mostrar() {
+	cout<<"id:"+getIdentificador()+", marca"+getMarca()+", modelo: "+getModelo();
+}
+
+bool Patinete::operator ==(const Patinete &patineteComparacion) const{
+	return (this->identificador==patineteComparacion.identificador);
+}
+
+
+string Patinete::getModelo() const {
+	return modelo;
+}
+
+string Patinete::getDNIUsuario() const {
+}
+
+void Patinete::setUsuario(Usuario *&usuario) {
+	usuarioActual = usuario;
+}
+
+Patinete::~Patinete() {
+	delete usuarioActual;
+	usuarioActual = nullptr;
+}
+

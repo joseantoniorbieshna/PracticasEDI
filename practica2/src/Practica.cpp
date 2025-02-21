@@ -8,15 +8,19 @@
 
 #include "PruebasUsuario.h"
 #include "PruebaCuentaBancaria.h"
+#include "PruebaPatinete.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-	//practica 1
-	//pruebasUsuariosInstanciasEstica();
-	//pruebasUsuarioInstanciasDinamicas();
+	// practica 1
+	// pruebasUsuariosInstanciasEstica();
+	// pruebasUsuarioInstanciasDinamicas();
 
-	//practica 2
-	pruebaCuentaBancaria();
+	// practica 2
+	// pruebaCuentaBancaria();
+
+	// practica 3
+	pruebaPatinete();
 	return 0;
 }

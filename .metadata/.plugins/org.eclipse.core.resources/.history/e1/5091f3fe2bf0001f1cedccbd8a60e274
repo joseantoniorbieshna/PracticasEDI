@@ -1,0 +1,49 @@
+/*
+ * Patinete.cpp
+ *
+ *  Created on: 21 feb 2025
+ *      Author: jose
+ */
+
+#include "Patinete.h"
+#include <iostream>
+
+Patinete::Patinete() {
+	usuarioActual=nullptr;
+	disponible=false;
+	averiado=false;
+
+}
+
+Patinete::Patinete(const Patinete &patinete) {
+}
+
+string Patinete::getIdentificador() const {
+}
+
+string Patinete::getMarca() const {
+}
+
+string Patinete::getDNIUsuario() const {
+}
+
+Usuario* Patinete::getUsuario() const {
+}
+
+bool Patinete::isAveriado() const {
+}
+
+bool Patinete::isDisponible() const {
+}
+
+void Patinete::mostrar() {
+}
+
+bool Patinete::operator ==(const Patinete &patineteComparacion) {
+	return (this->identificador==patineteComparacion.identificador)
+}
+
+Patinete::~Patinete() {
+	// TODO Auto-generated destructor stub
+}
+
